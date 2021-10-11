@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous" >
+    </script>
+    <script defer src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul class="menu-nav">
+                <li class="nav-menu-item"><a href="#" class="nav-mennu-link">INICIO</a></li>
+                <li class="nav-menu-item"><a href="datos.html" class="nav-mennu-link">DATOS</a></li>
+                <li class="nav-menu-item"><a href="formulario.html" class="nav-mennu-link">REGISTRARME</a></li>
+            </ul> 
+            <img class="logo" src="logo.jpg" alt="">
+            <button class="toggle" aria-label="Abrir menú" >
+                <i class="fas fa-bars"></i>
+            </button>
+        <ul class="nav-menu">
+            <li class="nav-items "><a href="index.html" class="nav-link active"><ion-icon class="nav-ion" name="home-outline"></ion-icon></a></li>
+            <li class="nav-items"><a href="datos.html" class="nav-link"><ion-icon class="nav-ion" name="person-outline"></ion-icon></a></li>
+            <li class="nav-items"><a href="formulario.html" class="nav-link"><ion-icon class="nav-ion" name="add-circle-outline"></ion-icon></a></li>
+            <div id="marker"></div>      
+        </ul>
+    </nav>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let marker = document.querySelector('#marker');
+        let list = document.querySelectorAll('ul li');
+
+        function moveIndicator(e){
+            marker.style.left = e.offsetLeft+'px';
+            marker.style.width = e.offsetWidth+'px';
+        }
+
+        list.forEach(link => {
+            link.addEventListener('mousemove', (e) => {
+                moveIndicator(e.target);
+            })
+        })
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('mouseover',activeLink));
+    </script>
+    </header>
+    <section>
+        <h2 class="nota" >Bienvenidos </h2>
+    </section>
+</html>

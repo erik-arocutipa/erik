@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('paisaje.jpg');
+    position: relative;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    z-index: -100;
+}
+.section{
+    width: 500px;
+    height:500px;
+    background: rgba(0,0,0, 0.4);
+    margin: 0 auto;
+    margin-top: 4%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    position: center;
+    box-shadow: 7px 13px 37px #000;
+    z-index: -10;
+}
+.caja{
+    border-radius: 50%;
+}
+.nav-menu{
+    list-style: none;
+}
+.nav-icon{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    z-index: 100;
+    font-size: 3em;
+}
+@media (max-width: 768px){
+    body{
+        background: url('paisaje.jpg');
+        position: relative;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        z-index: -100;
+    }
+    .section{
+        width: 500px;
+        height: 500px;
+        background: rgba(0,0,0, 0.4);
+        margin: 0 auto;
+        margin-top: 4%;
+        padding: 20px;
+        color: white;
+        height: 50 20px;
+        text-align: center;
+        border-radius: 15px;
+        position: center;
+        box-shadow: 7px 13px 37px #000;
+        z-index: -10;
+    }
+    .caja{
+        border-radius: 50%;
+    }
+    .nav-menu{
+        list-style: none;
+    }
+    .nav-icon{
+        position: relative;
+        color: white;
+        text-decoration: none;
+        z-index: 100;
+        font-size: 2em;
+    }
+
+}
